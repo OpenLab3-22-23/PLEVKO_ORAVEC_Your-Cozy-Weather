@@ -6,5 +6,5 @@
 <h3>Division of our work:</h3>
 <ul>
   <li><h4>Majo’ll design the site</h4></li>
-  <li><h4>Yán’ll work with website functions</h4></li>
+  <li><h4>Yán:"I ’ll use the Weather API data which will parse into our Search bar function which will allow us to find some location. After choosing location it’ll change the behaviour of the background and changes the Block UI to the Second state (showing current temperature, an image with weather and city) </h4></li>
 </ul>
