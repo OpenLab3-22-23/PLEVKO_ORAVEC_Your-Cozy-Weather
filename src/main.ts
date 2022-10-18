@@ -2,7 +2,7 @@ import './style.css'
 const options = {
 	method: 'GET',
 	headers: {
-		'X-RapidAPI-Key': 'b8138cfeedmsh79a33042d05d082p141447jsnb7582032d27a',
+		'X-RapidAPI-Key': '7151a85878mshb32875c0cba7e82p1de453jsn143e8109a919',
 		'X-RapidAPI-Host': 'weatherbit-v1-mashape.p.rapidapi.com'
 	}
 };
