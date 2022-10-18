@@ -1,4 +1,15 @@
 import './style.css'
+document.querySelector<HTMLDivElement>('#app')!.innerHTML =`
+<div class="Block">
+<div class="DivInput">
+<input placeholder="Enter a location..." class="inputek" type=""> </input>
+</div>
+</div>
+
+
+
+
+`
 const options = {
 	method: 'GET',
 	headers: {

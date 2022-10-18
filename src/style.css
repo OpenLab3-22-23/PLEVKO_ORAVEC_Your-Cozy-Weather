@@ -3,3 +3,17 @@ body {
   background-color: rgb(56,220, 250);
   overflow: hidden;
 }
+.Block{
+width: 600px; height: 300px;
+border-radius: 10px;
+background-color: gray;
+border: 2px solid black;
+margin: auto;
+}
+.DivInput{
+  text-align: center;
+  margin-top: 150px;
+}
+.inputek{
+  text-align: center;
+}
