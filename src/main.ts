@@ -1,4 +1,5 @@
 import './style.css'
+import './gulky.ts'
 document.querySelector<HTMLDivElement>('#app')!.innerHTML =`
 <canvas id="canvas"></canvas>
 
@@ -18,7 +19,6 @@ const options = {
 		'X-RapidAPI-Host': 'weatherbit-v1-mashape.p.rapidapi.com'
 	}
 };
-import './gulky';
 fetch('https://weatherbit-v1-mashape.p.rapidapi.com/forecast/3hourly?lat=35.5&lon=-78.5', options)
 	.then(response => response.json())
 	.then(response => console.log(response))
