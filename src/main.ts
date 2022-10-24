@@ -1,17 +1,33 @@
 import './style.css'
 import './gulky.ts'
 document.querySelector<HTMLDivElement>('#app')!.innerHTML =`
-<canvas id="canvas"></canvas>
-
 <div class="Block">
 <div class="DivInput">
-<input placeholder="Enter a location..." class="inputek" type=""> </input>
+<input placeholder="Enter a location..." class="inputek" type="search" id="maininput()"> </input>
+<input type="submit" value="Submit" onclick="SecondState()"</input>
 </div>
 </div>
+
+
 
 `
+function maininput(){
+
+}
+
+function SecondState() {
+	document.getElementById("maininput()").onsubmit();
+
+  }
+/*nejaké mesto(list - databáza s mestami) a nastaviť mu propertu;
+ vytvoriť fciu či metódu ktorá nam získa info z ’options’; 
+ "mestu" sa nastavia Naše parametre;
+ (nasleduje nastavenie vykreslovania Našich parametrov) ; 
+  ..... */ 
 
 
+
+  
 const options = {
 	method: 'GET',
 	headers: {
