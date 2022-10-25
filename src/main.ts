@@ -1,21 +1,17 @@
 import './style.css'
-import './gulky.ts'
-document.querySelector<HTMLDivElement>('#app')!.innerHTML =`
-<div class="Block">
-<div class="DivInput">
-<input placeholder="Enter a location..." class="inputek" type="search" id="maininput()"> </input>
-<input type="submit" value="Submit" onclick="SecondState()"</input>
-</div>
-</div>
+//import './gulky.ts'
+/*document.querySelector<HTMLDivElement>('#app')!.innerHTML =`
 
 
 
-`
+
+`*/
 function maininput(){
 
 }
 
 function SecondState() {
+
 	document.getElementById("maininput()").onsubmit();
 
   }
@@ -26,8 +22,61 @@ function SecondState() {
   ..... */ 
 
 
+ /* (document).ready(function () { 
+	// SUBMIT FORM 
+	("#weatherForm").submit( (event) => {
+	// Prevent the form from submitting via the browser. 
+	event.preventDefault(); 
+	ajaxPost();
+	});
+	function ajaxPost() { 
+	// PREPARE FORM DATA
+	var formData = {
+	 cityname: $("#cityname").val(),
+	}
+	// DO POST 
+	ajax({
+	type: "POST",
+	 contentType: "application/json",
+	url: window.location + "api/customers/save",
+	data: JSON.stringify(formData),
+	dataType: 'json',
+	success: (output)=> { 
+	("#postResultDiv").html("<p>" +
+	"<br>" +
+	"" + JSON.stringify(`<code> ${output.addname} </code> Current Tempeature is <code>${output.temp}<sup>o</sup>C </code>`) + "</p>"); 
+	},
+	error: (e) => {
+	alert("Error!"); 
+	console.log("ERROR: ", e); 
+	}
+	}); 
+	// Reset FormData after Posting 
+	resetData(); 
+	} 
+	function resetData() {
+	("#citytname").val(""); 
+	}
+	})*/
+  function spracujData(data: any){
+	  const container = document.querySelector("#app");
+	  const elementy = [];
+	  for(const element of data){
+		let description = document.createElement("p");  
+		description.className="act_sky";
+		description.textContent = element.weather.description;
+		elementy.push(description);
+	  }
+	  for(const element of elementy){
+		container?.appendChild(element);
 
-  
+	  }
+	  /*for(const element of data){
+		  let 
+	  }
+*/
+  }
+
 const options = {
 	method: 'GET',
 	headers: {
@@ -36,6 +85,11 @@ const options = {
 	}
 };
 fetch('https://weatherbit-v1-mashape.p.rapidapi.com/forecast/3hourly?lat=35.5&lon=-78.5', options)
+
 	.then(response => response.json())
-	.then(response => console.log(response))
+	.then(response => {
+		console.log(response)
+		spracujData(response.data)
+
+	})
 	.catch(err => console.error(err));
