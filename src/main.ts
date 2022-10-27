@@ -1,3 +1,4 @@
+
 import './style.css'
 //import './gulky.ts'
 /*document.querySelector<HTMLDivElement>('#app')!.innerHTML =`
@@ -58,26 +59,50 @@ function SecondState() {
 	("#citytname").val(""); 
 	}
 	})*/
-  function spracujData(data: any){
+
+  /*function spracujData(data: any){
 	  const container = document.querySelector("#app");
-	  const elementy = [];
+	  //const elementy = [];
 	  for(const element of data){
 		let description = document.createElement("p");  
 		description.className="act_sky";
 		description.textContent = element.weather.description;
-		elementy.push(description);
-	  }
-	  for(const element of elementy){
+		element.push(description);
+		container?.appendChild(element);
+	  }*/
+	  /*for(const element of elementy){
 		container?.appendChild(element);
 
-	  }
+	  }*/
 	  /*for(const element of data){
 		  let 
 	  }
-*/
+
+  }*/
+  function spracujData(data: any) {
+	const container = document.querySelector("#block");
+	let description = document.createElement("p");
+	description.className="act_sky";
+	description.textContent= data[0].weather.description;
+	container?.appendChild(description);
+
   }
 
-const options = {
+  const options = {
+	method: 'GET',
+	headers: {
+		'X-RapidAPI-Key': '56ba64173fmshc7e71874c046f26p12d62ajsn8245ba17a524',
+		'X-RapidAPI-Host': 'weatherbit-v1-mashape.p.rapidapi.com'
+	}
+};
+
+fetch('https://weatherbit-v1-mashape.p.rapidapi.com/forecast/3hourly?lat=35.5&lon=-78.5', options)
+	.then(response => response.json())
+	.then(response => 
+		{console.log(response)
+			spracujData(response.data)})
+	.catch(err => console.error(err));
+/*const options = {
 	method: 'GET',
 	headers: {
 		'X-RapidAPI-Key': '7151a85878mshb32875c0cba7e82p1de453jsn143e8109a919',
@@ -92,4 +117,4 @@ fetch('https://weatherbit-v1-mashape.p.rapidapi.com/forecast/3hourly?lat=35.5&lo
 		spracujData(response.data)
 
 	})
-	.catch(err => console.error(err));
+	.catch(err => console.error(err));*/
