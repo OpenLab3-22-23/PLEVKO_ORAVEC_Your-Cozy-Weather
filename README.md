@@ -1,6 +1,6 @@
 # Your-Cozy-NewYork-Weather
 
-<p><u> A simple weather website with background animations/effects, you can choose A Time in US/New York (using Weather API from RapidAPI’s), it will show you the weather informations about that Time </u></p>
+<p><u> A simple weather website with background animations/effects, you can choose A Time in US/New York (using Weather API from RapidAPI web), it will show you the weather informations about that Time </u></p>
 <br/>
 <a href="https://www.figma.com/file/UspwXFmr15akQ2tFMfpSGy/Untitled?node-id=0%3A1"><b>Figma mockup</B></a>
 <h3>Division of our work:</h3>
