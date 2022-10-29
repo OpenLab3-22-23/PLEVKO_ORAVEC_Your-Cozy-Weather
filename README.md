@@ -1,4 +1,4 @@
-# Your-Cozy-Weather
+# Your-Cozy-NewYork-Weather
 
 <p><u> A simple weather website with background animations/effects, you can choose A Time in US/New York (using Weather API from RapidAPI’s), it will show you the weather informations about that Time </u></p>
 <br/>
