@@ -16,6 +16,17 @@ margin: auto;
 }
 .inputek{
   text-align: center;
+  outline: none;
+  text-align: center;
+  border-radius: 10px;
+  border: none;
+  padding: 0.6em;
+}
+.mainbutton{
+    border: none;
+  justify-content: center;
+  border-radius: 40%;
+  padding: 0.7em;
 }
 .lokacia{
  text-align: center;
@@ -23,7 +34,7 @@ margin: auto;
 .stred{
   text-align: center;
 }
-.act-sky{
+.sky_d{
 
 }
 .lokacia{
@@ -35,3 +46,4 @@ margin: auto;
   font-family: Arial, Helvetica, sans-serif;
   font-size: 40px;
 }
+

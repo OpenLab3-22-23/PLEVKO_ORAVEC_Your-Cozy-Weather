@@ -81,10 +81,22 @@ function SecondState() {
   }*/
   function spracujData(data: any) {
 	const container = document.querySelector("#block");
-	let description = document.createElement("p");
-	description.className="act_sky";
-	description.textContent= data[0].weather.description;
-	container?.appendChild(description);
+	let sky_d = document.createElement("d");
+	sky_d.className="sky_d";
+	sky_d.textContent= data[0].weather.description;
+	container?.appendChild(sky_d);
+
+	let crnt_time = document.createElement("t");
+	crnt_time.className="crnt_time";
+	crnt_time.textContent=data[0].timestamp_utc;
+	//crnt_time.textContent=data[1].timestamp_utc;
+	//crnt_time.textContent=data[2].timestamp_utc;
+	const puttime = document.querySelector("#first");
+	puttime?.appendChild(crnt_time);
+	
+
+
+	
 
   }
 
