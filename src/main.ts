@@ -7,7 +7,7 @@ import './style.css'
 
 
 `*/
-function maininput(){
+/*function maininput(){
 
 }
 
@@ -15,7 +15,7 @@ function SecondState() {
 
 	document.getElementById("maininput()").onsubmit();
 
-  }
+  }*/
 /*nejaké mesto(list - databáza s mestami) a nastaviť mu propertu;
  vytvoriť fciu či metódu ktorá nam získa info z ’options’; 
  "mestu" sa nastavia Naše parametre;
@@ -80,6 +80,7 @@ function SecondState() {
 
   }*/
   function spracujData(data: any) {
+	
 	const container = document.querySelector("#block");
 	let sky_d = document.createElement("d");
 	sky_d.className="sky_d";
@@ -89,10 +90,15 @@ function SecondState() {
 	let crnt_time = document.createElement("t");
 	crnt_time.className="crnt_time";
 	crnt_time.textContent=data[0].timestamp_utc;
-	//crnt_time.textContent=data[1].timestamp_utc;
-	//crnt_time.textContent=data[2].timestamp_utc;
-	const puttime = document.querySelector("#first");
+	const puttime = document.querySelector("#firstT");
 	puttime?.appendChild(crnt_time);
+	//
+	let crnt_time1 =document.createElement("t1");
+	crnt_time1.className="crnt_time1";
+	crnt_time1.textContent=data[1].timestamp_utc;
+	const puttime1 = document.querySelector("#secondT")
+	puttime1?.appendChild(crnt_time1);
+
 	
 
 

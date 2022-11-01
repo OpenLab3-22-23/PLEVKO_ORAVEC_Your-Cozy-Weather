@@ -35,7 +35,11 @@ margin: auto;
   text-align: center;
 }
 .sky_d{
-
+ 
+}
+.crnt_time{
+  font-family: Arial, Helvetica, sans-serif;
+  color: grey;
 }
 .lokacia{
   

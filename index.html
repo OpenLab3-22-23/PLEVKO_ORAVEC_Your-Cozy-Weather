@@ -17,17 +17,19 @@
       <div class="DivInput">
         <form id="form">   
       <select class="inputek">
-        <option id="first" value="1">
-        </option>
-        <option value="2" ></option>
+        <option id="firstT" value="1" ></option>
+        <option id="secondT" value="2" ></option>
         <option value="3" ></option>
-        </select>
+      </select>
         <script>
-          //const value1 = 
+          const value1 = document.querySelector("#firstT")
+          function ow(value1){
+            document.write('<html><body><div><div><main><div><p>SSS</p></div></main></div></div></body></html>');
+          }
         </script>
         <main id="app-container" class="lokacia">
           <div id="place"  >
-            <p>*USING UTC TIME*</p>
+            <p id="ow">*USING UTC TIME*</p>
           </div>
         </main>
         </form>
