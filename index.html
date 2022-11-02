@@ -13,34 +13,43 @@
     <canvas id="canvas"></canvas>
 
     <div class="Block" id="block">
-      <h1 class="headher">Your cozy weather</h1>
+      <h1 class="headher">Your Cozy New York Weather</h1>
+      
       <div class="DivInput">
         <form id="form">   
       <select class="inputek">
-        <option id="firstT" value="1" ></option>
-        <option id="secondT" value="2" ></option>
+        <option value="*USING UTC TIME*"> Select the Time... </option>
+        <option  id="firstT" value="" ></option>
+        <option id="secondT" value="" ></option>
         <option value="3" ></option>
-      </select>
-        <script>
-          let value1 = document.querySelector("#firstT")
-          let prepis = document.querySelector("#ow")
-          //function  
-          
-          
-          function ow(prepis){
-            document.write("<html><body><div><div><main><div><p>SSS</p></div></main></div></div></body></html>");
-            document.close();
-          }
-          
-        </script>
+        </select>
+      <script>
+        const value1 = document.querySelector(".inputek");
+
+value1.addEventListener('change',(event) => {
+let prepis = document.querySelector("#ow");
+prepis.textContent = ` ${event.target.value}  °C`;});
+
+ //${event.target.value}
+
+
+
+      </script>
         <main id="app-container" class="lokacia">
           <div id="place"  >
             <p id="ow">*USING UTC TIME*</p>
+
           </div>
         </main>
+        
         </form>
+        
+      </div>
+      <div>
+        <label class="sky" id="sky">Currently: </label>
       </div>
       </div>  
+      
   </body>
 
 </html>

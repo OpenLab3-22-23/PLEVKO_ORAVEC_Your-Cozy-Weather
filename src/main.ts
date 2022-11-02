@@ -81,7 +81,8 @@ function SecondState() {
   }*/
   function spracujData(data: any) {
 	
-	const container = document.querySelector("#block");
+	const container = document.querySelector("#sky");
+	
 	let sky_d = document.createElement("d");
 	sky_d.className="sky_d";
 	sky_d.textContent= data[0].weather.description;
@@ -99,6 +100,37 @@ function SecondState() {
 	const puttime1 = document.querySelector("#secondT")
 	puttime1?.appendChild(crnt_time1);
 
+	/*let temp1 = document.createElement("temp");
+	temp1.textContent=data[0].temp;
+  
+	const temp1container = document.querySelector('#firstT');
+	temp1container?.appendChild(temp1);*/
+	function spracujData(data:any ){
+		let temp1 = document.createElement("temp");
+					temp1.textContent=data[0].temp;
+					  const temp1container = document.querySelector('#secondT');
+					document.getElementById("firstT").value = temp1container;
+		}
+		  //document.getElementById("firstT").value = "abc";
+		  const options = {
+			method: 'GET',
+			headers: {
+				'X-RapidAPI-Key': '7151a85878mshb32875c0cba7e82p1de453jsn143e8109a919',
+				'X-RapidAPI-Host': 'weatherbit-v1-mashape.p.rapidapi.com'
+			}
+		};fetch('https://weatherbit-v1-mashape.p.rapidapi.com/forecast/3hourly?lat=35.5&lon=-78.5', options)
+		.then(response => response.json())
+		.then(response => 
+			{console.log(response)
+			spracujData(response.data)})
+		.catch(err => console.error(err));
+	
+
+
+	
+	
+	
+
 	
 
 
@@ -107,6 +139,20 @@ function SecondState() {
   }
 
   const options = {
+	method: 'GET',
+	headers: {
+		'X-RapidAPI-Key': '7151a85878mshb32875c0cba7e82p1de453jsn143e8109a919',
+		'X-RapidAPI-Host': 'weatherbit-v1-mashape.p.rapidapi.com'
+	}
+};
+
+fetch('https://weatherbit-v1-mashape.p.rapidapi.com/forecast/3hourly?lat=35.5&lon=-78.5', options)
+	.then(response => response.json())
+	.then(response => 
+		{console.log(response)
+		spracujData(response.data)})
+	.catch(err => console.error(err));
+/*  const options = {
 	method: 'GET',
 	headers: {
 		'X-RapidAPI-Key': '56ba64173fmshc7e71874c046f26p12d62ajsn8245ba17a524',
@@ -119,20 +165,4 @@ fetch('https://weatherbit-v1-mashape.p.rapidapi.com/forecast/3hourly?lat=35.5&lo
 	.then(response => 
 		{console.log(response)
 			spracujData(response.data)})
-	.catch(err => console.error(err));
-/*const options = {
-	method: 'GET',
-	headers: {
-		'X-RapidAPI-Key': '7151a85878mshb32875c0cba7e82p1de453jsn143e8109a919',
-		'X-RapidAPI-Host': 'weatherbit-v1-mashape.p.rapidapi.com'
-	}
-};
-fetch('https://weatherbit-v1-mashape.p.rapidapi.com/forecast/3hourly?lat=35.5&lon=-78.5', options)
-
-	.then(response => response.json())
-	.then(response => {
-		console.log(response)
-		spracujData(response.data)
-
-	})
 	.catch(err => console.error(err));*/

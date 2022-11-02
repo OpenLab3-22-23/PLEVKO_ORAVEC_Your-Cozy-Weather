@@ -35,7 +35,11 @@ display: inline-block ;
   text-align: center;
 }
 .sky_d{
- 
+ color:rgb(51, 199, 191);
+}
+.sky{
+  color:palegreen;
+  margin: 20px;
 }
 .crnt_time{
   font-family: Arial, Helvetica, sans-serif;
