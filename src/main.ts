@@ -111,7 +111,7 @@ function SecondState() {
 					  const temp1container = document.querySelector('#secondT');
 					document.getElementById("firstT").value = temp1container;
 		}
-		  //document.getElementById("firstT").value = "abc";
+		  
 		  const options = {
 			method: 'GET',
 			headers: {

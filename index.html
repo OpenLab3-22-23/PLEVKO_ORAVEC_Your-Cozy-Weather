@@ -21,7 +21,7 @@
         <option value="*USING UTC TIME*"> Select the Time... </option>
         <option  id="firstT" value="" ></option>
         <option id="secondT" value="" ></option>
-        <option value="3" ></option>
+        <option value="" ></option>
         </select>
       <script>
         const value1 = document.querySelector(".inputek");
@@ -29,7 +29,7 @@
 value1.addEventListener('change',(event) => {
 let prepis = document.querySelector("#ow");
 prepis.textContent = ` ${event.target.value}  °C`;});
-
+//document.getElementById("firstT").value = raz dva;
  //${event.target.value}
 
 
