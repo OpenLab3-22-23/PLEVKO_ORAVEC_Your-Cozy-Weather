@@ -10,7 +10,7 @@ border-radius: 10px;
 background-color: gray;
 border: 2px solid black;
 margin: auto;
-display: inline-block ;
+margin-top: 0px;
 }
 .DivInput{
   text-align: center;

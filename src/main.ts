@@ -1,6 +1,6 @@
 
 import './style.css'
-//import './gulky.ts'
+import './gulky.ts'
 /*document.querySelector<HTMLDivElement>('#app')!.innerHTML =`
 
 
