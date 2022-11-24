@@ -8,3 +8,4 @@
   <li><h4>Majo:"I will make design of:  Block, and overall design in our Block"</h4></li>
   <li><h4>Yán:"I ’ll use the Weather API data which will parse into our into our Main Selector with multiple (NYC time) Options which holds the Values with the function that writes the Weather Information about that time. And after that i could develope much more!" </h4></li>
 </ul>
+![colorful divided divs D](https://user-images.githubusercontent.com/91180541/203718201-462afd2e-f825-4d48-a68d-077ab0732dd2.png)
